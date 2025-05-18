@@ -1,8 +1,8 @@
 type: picture-elements
-image: base image location
+image: /api/image/serve/baa645c2bbfbf3b43f1f9fcf73c2f365/512x512
 elements:
   - type: image
-    entity: right front door entity 
+    entity: binary_sensor.wvgzzze28re025316_door_closed_right_front
     state_filter:
       "on": opacity(100%)
       "off": opacity(0%)
@@ -11,21 +11,10 @@ elements:
       top: 0%
       width: 100%
       transform: none
-    image: right front door image location
+    image: /api/image/serve/c30cd9ef5cf794ac143e04c8e707339e/512x512
   - type: image
-    entity: left front door entity
-    image: left front door image location
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-  - type: image
-    entity: left back door entity
-    image: left back door image location
+    entity: binary_sensor.wvgzzze28re025316_door_closed_left_front
+    image: /api/image/serve/67030a3a4f304970caf44678ab4f28a3/512x512
     state_filter:
       "on": opacity(100%)
       "off": opacity(0%)
@@ -35,8 +24,8 @@ elements:
       width: 100%
       transform: none
   - type: image
-    entity: right back door entity
-    image: right back door image location
+    entity: binary_sensor.wvgzzze28re025316_door_closed_left_back
+    image: /api/image/serve/65e1d64520f8fa45fa4afada23a45d91/512x512
     state_filter:
       "on": opacity(100%)
       "off": opacity(0%)
@@ -46,8 +35,8 @@ elements:
       width: 100%
       transform: none
   - type: image
-    entity: boot(trunk) entity 
-    image: boot(trunk) image location
+    entity: binary_sensor.wvgzzze28re025316_door_closed_right_back
+    image: /api/image/serve/2ab5cacb2160cf9f26a075f5d5409b90/512x512
     state_filter:
       "on": opacity(100%)
       "off": opacity(0%)
@@ -57,7 +46,8 @@ elements:
       width: 100%
       transform: none
   - type: image
-    entity: bonnet(hood)entity
+    entity: binary_sensor.wvgzzze28re025316_trunk_closed
+    image: /api/image/serve/3608cd539df82ac675608d9282151fdf/512x512
     state_filter:
       "on": opacity(100%)
       "off": opacity(0%)
@@ -66,24 +56,85 @@ elements:
       top: 0%
       width: 100%
       transform: none
-    image: bonnet(hood) image location
-  - type: state-label
-    entity: battery/fuel tank entity
-    prefix: "Battery: "
+  - type: image
+    entity: binary_sensor.wvgzzze28re025316_hood_closed
+    state_filter:
+      "on": opacity(100%)
+      "off": opacity(0%)
+    style:
+      left: 0%
+      top: 0%
+      width: 100%
+      transform: none
+    image: /api/image/serve/faa19b16efc47778e38f759190fe56d6/512x512
+  - type: state-icon
+    entity: sensor.wvgzzze28re025316_battery_level
+    icon: mdi:battery
     style:
       top: 10%
-      left: 20%
-      background-color: rgba(0, 0, 0, 0.7)
+      left: 4%
       color: white
-      border-radius: 4px
-      padding: 4px 8px
+      border-radius: 2px
+      padding: 2px 2px
   - type: state-label
-    entity: range entity
-    prefix: "Range: "
+    entity: sensor.wvgzzze28re025316_battery_level
+    prefix: ""
     style:
       top: 10%
-      left: 80%
-      background-color: rgba(0, 0, 0, 0.7)
+      left: 12%
       color: white
-      border-radius: 4px
-      padding: 4px 8px
+      border-radius: 2px
+      padding: 2px 2px
+  - type: state-icon
+    entity: sensor.wvgzzze28re025316_electric_range
+    icon: mdi:map-marker-distance
+    style:
+      top: 20%
+      left: 4%
+      color: white
+      border-radius: 2px
+      padding: 2px 2px
+  - type: state-label
+    entity: sensor.wvgzzze28re025316_electric_range
+    prefix: ""
+    style:
+      top: 20%
+      left: 15%
+      color: white
+      border-radius: 2px
+      padding: 2px 2px
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.wvgzzze28re025316_doors_locked
+        state: "on"
+    elements:
+      - type: icon
+        icon: mdi:lock-open
+        style:
+          top: 30%
+          left: 4%
+          color: green
+          border-radius: 2px
+          padding: 2px 2px
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.wvgzzze28re025316_doors_locked
+        state: "off"
+    elements:
+      - type: icon
+        icon: mdi:lock
+        style:
+          top: 30%
+          left: 4%
+          color: red
+          border-radius: 2px
+          padding: 2px 2px
+  - type: state-label
+    entity: binary_sensor.wvgzzze28re025316_doors_locked
+    prefix: ""
+    style:
+      top: 30%
+      left: 15%
+      color: white
+      border-radius: 2px
+      padding: 2px 2px
