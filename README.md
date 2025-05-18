@@ -1,4 +1,4 @@
-# Volkswagen ID.4 Door Status Visualization for Home Assistant
+# Car Door Status Visualization for Home Assistant
 
 This custom visualization card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
 
