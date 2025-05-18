@@ -2,6 +2,11 @@
 
 This custom visualization card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
 
+![Screenshot 2025-05-18 130101](https://github.com/user-attachments/assets/dc88203c-f4ee-402d-b4f2-96f27fc44c56)
+
+
+This custom visualization card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
+
 ## 📋 Description
 
 This card uses the picture-elements feature in Home Assistant to provide a sleek, intuitive visualization of your vehicles status. The card shows:
