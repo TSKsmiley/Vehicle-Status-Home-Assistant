@@ -1,18 +1,18 @@
 # Car Door Status Visualization for Home Assistant
 
-This custom visualization card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
+This custom visualization card for Home Assistant provides a real-time visual representation of your cars door, boot (trunk), and bonnet (hood) status, along with battery/fuel level and range information.
 
-UPDATED: Now showsicons instead if labels, 
+UPDATED: Now shows icons instead of labels, 
 
 ![image](https://github.com/user-attachments/assets/189b3848-ba48-4b51-94ba-0dec94308c68)
 
-This custom visualization card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
+This custom visualisation card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
 
 I have included the files I used for the Volkswagen ID.4, add a new manual card and use the YAML in the included Vehicle-Status-Home-Assistant.yml file
 
 ## 📋 Description
 
-This card uses the picture-elements feature in Home Assistant to provide a sleek, intuitive visualization of your vehicles status. The card shows:
+This card uses the picture-elements feature in Home Assistant to provide a sleek, intuitive visualisation of your vehicles status. The card shows:
 
 - A base image of your car when all doors are closed
 - Visual door overlays that appear only when specific doors are open
@@ -20,14 +20,14 @@ This card uses the picture-elements feature in Home Assistant to provide a sleek
 - Current range 
 - Real-time updates as doors open and close
 
-The visualization leverages the state_filter property to dynamically show door overlays only when the corresponding doors are open, creating an intuitive and user-friendly representation of your vehicle's status.
+The visualisation leverages the state_filter property to dynamically show door overlays only when the corresponding doors are open, creating an intuitive and user-friendly representation of your vehicle's status.
 
 ## 🔧 Requirements
 
 To use this card, you'll need:
 
 1. Home Assistant with your cars integration set up
-2. The binary sensors for your vehicle's doors, trunk, and hood
+2. The binary sensors for your vehicle's doors, boot (trunk), and bonnet (hood)
 3. Sensors for battery/fuel level and range
 4. Images for your visualization (base car image and door overlays)
 
@@ -60,7 +60,7 @@ This creates a seamless effect where door overlays only appear when the correspo
 
 ## 🤝 Contribution
 
-Feel free to fork this repo and make improvements! This is a community project to enhance the vehicle visualization experience in Home Assistant.
+Feel free to fork this repo and make improvements! This is a community project to enhance the vehicle visualisation experience in Home Assistant.
 
 ## 📝 License
 
