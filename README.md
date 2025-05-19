@@ -43,7 +43,7 @@ You'll need to provide the following images:
 4. `backleft.png` - Overlay showing the left rear door open (transparent background)
 5. `backright.png` - Overlay showing the right rear door open (transparent background)
 6. `boot.png` - Overlay showing the trunk open (transparent background)
-7. `boot.png` - Overlay showing the hood open (transparent background)
+7. `bonnet.png` - Overlay showing the hood open (transparent background)
 
 All overlay images should have transparent backgrounds except for the specific door, and should exactly match the dimensions of the base image.
 
