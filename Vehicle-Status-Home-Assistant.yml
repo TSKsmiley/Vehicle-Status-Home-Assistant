@@ -1,140 +1,263 @@
-type: picture-elements
-image: /api/image/serve/baa645c2bbfbf3b43f1f9fcf73c2f365/512x512
-elements:
-  - type: image
-    entity: binary_sensor.wvgzzze28re025316_door_closed_right_front
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-    image: /api/image/serve/c30cd9ef5cf794ac143e04c8e707339e/512x512
-  - type: image
-    entity: binary_sensor.wvgzzze28re025316_door_closed_left_front
-    image: /api/image/serve/67030a3a4f304970caf44678ab4f28a3/512x512
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-  - type: image
-    entity: binary_sensor.wvgzzze28re025316_door_closed_left_back
-    image: /api/image/serve/65e1d64520f8fa45fa4afada23a45d91/512x512
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-  - type: image
-    entity: binary_sensor.wvgzzze28re025316_door_closed_right_back
-    image: /api/image/serve/2ab5cacb2160cf9f26a075f5d5409b90/512x512
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-  - type: image
-    entity: binary_sensor.wvgzzze28re025316_trunk_closed
-    image: /api/image/serve/3608cd539df82ac675608d9282151fdf/512x512
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-  - type: image
-    entity: binary_sensor.wvgzzze28re025316_hood_closed
-    state_filter:
-      "on": opacity(100%)
-      "off": opacity(0%)
-    style:
-      left: 0%
-      top: 0%
-      width: 100%
-      transform: none
-    image: /api/image/serve/faa19b16efc47778e38f759190fe56d6/512x512
-  - type: state-icon
-    entity: sensor.wvgzzze28re025316_battery_level
-    icon: mdi:battery
-    style:
-      top: 10%
-      left: 4%
-      color: white
-      border-radius: 2px
-      padding: 2px 2px
-  - type: state-label
-    entity: sensor.wvgzzze28re025316_battery_level
-    prefix: ""
-    style:
-      top: 10%
-      left: 12%
-      color: white
-      border-radius: 2px
-      padding: 2px 2px
-  - type: state-icon
-    entity: sensor.wvgzzze28re025316_electric_range
-    icon: mdi:map-marker-distance
-    style:
-      top: 20%
-      left: 4%
-      color: white
-      border-radius: 2px
-      padding: 2px 2px
-  - type: state-label
-    entity: sensor.wvgzzze28re025316_electric_range
-    prefix: ""
-    style:
-      top: 20%
-      left: 15%
-      color: white
-      border-radius: 2px
-      padding: 2px 2px
-  - type: conditional
-    conditions:
-      - entity: binary_sensor.wvgzzze28re025316_doors_locked
-        state: "on"
+type: vertical-stack
+cards:
+  - type: markdown
+    content: >
+      <h2 style="text-align: center; color: white; background-color: rgba(50,
+      50, 50, 0.7); border-radius: 8px; margin: 0; padding: 8px;">Vehicle
+      Status</h2>
+  - type: picture-elements
+    image: /api/image/serve/baa645c2bbfbf3b43f1f9fcf73c2f365/512x512
     elements:
-      - type: icon
-        icon: mdi:lock-open
+      - type: image
+        entity: binary_sensor.wvgzzze28re025316_door_closed_right_front
+        state_filter:
+          "on": opacity(100%)
+          "off": opacity(0%)
         style:
-          top: 30%
-          left: 4%
-          color: green
-          border-radius: 2px
-          padding: 2px 2px
-  - type: conditional
-    conditions:
-      - entity: binary_sensor.wvgzzze28re025316_doors_locked
-        state: "off"
-    elements:
-      - type: icon
-        icon: mdi:lock
+          left: 50%
+          top: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+        image: /api/image/serve/c30cd9ef5cf794ac143e04c8e707339e/512x512
+      - type: image
+        entity: binary_sensor.wvgzzze28re025316_door_closed_left_front
+        image: /api/image/serve/67030a3a4f304970caf44678ab4f28a3/512x512
+        state_filter:
+          "on": opacity(100%)
+          "off": opacity(0%)
         style:
-          top: 30%
-          left: 4%
-          color: red
-          border-radius: 2px
-          padding: 2px 2px
-  - type: state-label
-    entity: binary_sensor.wvgzzze28re025316_doors_locked
-    prefix: ""
-    style:
-      top: 30%
-      left: 15%
-      color: white
-      border-radius: 2px
-      padding: 2px 2px
+          left: 50%
+          top: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+      - type: image
+        entity: binary_sensor.wvgzzze28re025316_door_closed_left_back
+        image: /api/image/serve/65e1d64520f8fa45fa4afada23a45d91/512x512
+        state_filter:
+          "on": opacity(100%)
+          "off": opacity(0%)
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+      - type: image
+        entity: binary_sensor.wvgzzze28re025316_door_closed_right_back
+        image: /api/image/serve/2ab5cacb2160cf9f26a075f5d5409b90/512x512
+        state_filter:
+          "on": opacity(100%)
+          "off": opacity(0%)
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+      - type: image
+        entity: binary_sensor.wvgzzze28re025316_trunk_closed
+        image: /api/image/serve/3608cd539df82ac675608d9282151fdf/512x512
+        state_filter:
+          "on": opacity(100%)
+          "off": opacity(0%)
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+      - type: image
+        entity: binary_sensor.wvgzzze28re025316_hood_closed
+        state_filter:
+          "on": opacity(100%)
+          "off": opacity(0%)
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+        image: /api/image/serve/faa19b16efc47778e38f759190fe56d6/512x512
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: sensor.wvgzzze28re025316_battery_level
+        name: Battery
+        icon: mdi:battery
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: |
+                [[[
+                  var level = entity.state;
+                  if (level >= 75) return 'green';
+                  if (level >= 50) return 'yellow';
+                  if (level >= 25) return 'orange';
+                  return 'red';
+                ]]]
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: sensor.wvgzzze28re025316_electric_range
+        name: Range
+        icon: mdi:map-marker-distance
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: sensor.vw_id_4_charging_status
+        name: Charging
+        icon: mdi:ev-station
+        show_state: true
+        tap_action:
+          action: more-info
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: binary_sensor.wvgzzze28re025316_charging_cable_connected
+        name: Charging Cable
+        icon: mdi:ev-plug-type2
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: sensor.wvgzzze28re025316_battery_target_charge_level
+        name: Target Level
+        icon: mdi:battery-plus
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: sensor.wvgzzze28re025316_charging_power
+        name: Charging Rate
+        icon: mdi:battery-charging
+        show_state: true
+        tap_action:
+          action: more-info
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: binary_sensor.wvgzzze28re025316_doors_locked
+        name: Doors
+        icon: mdi:car-door-lock
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: binary_sensor.wvgzzze28re025316_windows_closed
+        name: Windows
+        icon: mdi:window-closed
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: sensor.wvgzzze28re025316_climatisation_target_temperature
+        name: Target Temperature
+        icon: mdi:thermometer
+        show_state: true
+        tap_action:
+          action: more-info
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+      - type: button
+        name: Start Climate Control
+        icon: mdi:power
+        show_state: true
+        tap_action:
+          action: call-service
+          service: switch.turn_on
+          service_data:
+            entity_id: switch.wvgzzze28re025316_electric_climatisation
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+      - type: button
+        name: Stop Climate Control
+        icon: mdi:power-off
+        show_state: true
+        tap_action:
+          action: call-service
+          service: switch.turn_off
+          service_data:
+            entity_id: switch.wvgzzze28re025316_electric_climatisation
+          icon:
+            - color: white
+          name:
+            - color: white
+          state:
+            - color: white
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: device_tracker.wvgzzze28re025316_position
+        name: Location
+        icon: mdi:map-marker-radius
+        show_state: true
+        tap_action:
+          action: more-info
+          name:
+            - color: white
+          state:
+            - color: white
