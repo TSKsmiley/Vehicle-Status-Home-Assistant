@@ -8,6 +8,15 @@ cards:
   - type: picture-elements
     image: /api/image/serve/baa645c2bbfbf3b43f1f9fcf73c2f365/512x512
     elements:
+      - type: state-label
+        entity: sensor.wvgzzze28re025316_last_data_refresh
+        style:
+          top: 5%
+          left: 50%
+          color: white
+          border-radius: 2x
+          padding: 2px 2px
+        prefix: "Last refreshed:  "
       - type: image
         entity: binary_sensor.wvgzzze28re025316_door_closed_right_front
         state_filter:
@@ -220,7 +229,7 @@ cards:
             - color: white
       - type: button
         name: Start Climate Control
-        icon: mdi:power
+        icon: mdi:snowflake
         show_state: true
         tap_action:
           action: call-service
@@ -235,7 +244,7 @@ cards:
             - color: white
       - type: button
         name: Stop Climate Control
-        icon: mdi:power-off
+        icon: mdi:snowflake-off
         show_state: true
         tap_action:
           action: call-service
