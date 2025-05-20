@@ -38,7 +38,7 @@ To use this card, you'll need:
 
 ## 🖼️ Required Images
 
-You'll need to provide the following images:
+You'll need the following images: (I have provided these if you need them)
 
 1. `default.jpg` - A top-down view of your your with all doors closed
 2. `frontright.png` - Overlay showing the front right door open (transparent background)
