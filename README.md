@@ -7,7 +7,7 @@ UPDATED: Now shows icons instead of labels, also shows the data refresh time.
 
 <img width="260" alt="Vehicle Status 2" src="https://github.com/user-attachments/assets/cdffc6d3-66dc-4c85-a9fe-24f4959c3653" />
 <img width="260" alt="Vehicle Status 1" src="https://github.com/user-attachments/assets/8d1e082d-c96d-4ee9-bda3-70bd9418fa1a" />
-![Screenshot_20250520_001008_Home Assistant](https://github.com/user-attachments/assets/00ea52e6-587a-4d1b-a558-f8f54e7f30d4)
+<img width="260" alt="Vehicle Status 3" src="https://github.com/user-attachments/assets/00ea52e6-587a-4d1b-a558-f8f54e7f30d4"
 
 This custom visualisation card for Home Assistant provides a real-time visual representation of your cars door, trunk, and hood status, along with battery/fuel level and range information.
 
