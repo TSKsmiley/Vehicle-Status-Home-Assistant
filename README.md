@@ -1,3 +1,10 @@
+# Fork
+
+![dashboard](https://github.com/user-attachments/assets/0744aec0-2b06-4278-95d1-26b85e29254c)
+
+
+# Original
+
 # Car Door Status Visualization for Home Assistant
 
 This custom visualization card for Home Assistant provides a real-time visual representation of your Volkswagen ID.4 door, boot (trunk), and bonnet (hood) status, along with battery/fuel level and range information.
