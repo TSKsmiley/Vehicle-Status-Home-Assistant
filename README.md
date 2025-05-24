@@ -1,7 +1,6 @@
 # Fork
 
-![dashboard](https://github.com/user-attachments/assets/0744aec0-2b06-4278-95d1-26b85e29254c)
-
+<img width="260" alt="Dashboard" src="https://github.com/user-attachments/assets/0744aec0-2b06-4278-95d1-26b85e29254c" />
 
 # Original
 
