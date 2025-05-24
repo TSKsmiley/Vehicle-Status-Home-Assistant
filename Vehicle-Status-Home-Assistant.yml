@@ -227,36 +227,34 @@ cards:
             - color: white
           state:
             - color: white
-      - type: button
-        name: Start Climate Control
-        icon: mdi:snowflake
-        show_state: true
-        tap_action:
-          action: call-service
-          service: switch.turn_on
-          service_data:
-            entity_id: switch.wvgzzze28re025316_electric_climatisation
-          icon:
-            - color: white
-          name:
-            - color: white
-          state:
-            - color: white
-      - type: button
-        name: Stop Climate Control
-        icon: mdi:snowflake-off
-        show_state: true
-        tap_action:
-          action: call-service
-          service: switch.turn_off
-          service_data:
-            entity_id: switch.wvgzzze28re025316_electric_climatisation
-          icon:
-            - color: white
-          name:
-            - color: white
-          state:
-            - color: white
+      - type: conditional
+        conditions:
+          - entity: switch.wvgzzze28re025316_electric_climatisation
+            state: 'off'
+        card:
+          type: button
+          name: Start Climate Control
+          icon: mdi:snowflake
+          show_state: true
+          tap_action:
+            action: call-service
+            service: switch.turn_on
+            service_data:
+              entity_id: switch.wvgzzze28re025316_electric_climatisation
+      - type: conditional
+        conditions:
+          - entity: switch.wvgzzze28re025316_electric_climatisation
+            state: 'on'
+        card:
+          type: button
+          name: Stop Climate Control
+          icon: mdi:snowflake-off
+          show_state: true
+          tap_action:
+            action: call-service
+            service: switch.turn_off
+            service_data:
+              entity_id: switch.wvgzzze28re025316_electric_climatisation
       - show_name: true
         show_icon: true
         type: button
